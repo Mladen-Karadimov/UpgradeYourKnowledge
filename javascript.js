@@ -28,6 +28,13 @@ var main = function() {
 		}, 250);
 	});	
 
+	$('#facts').click(function(){
+		$('#container, #left, #right').fadeIn("slow", function() {
+			left: "0";
+
+		}).css("display","inline-block");
+	});
+
 }
 
 $(document).ready(main);
