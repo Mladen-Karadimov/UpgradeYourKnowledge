@@ -1,8 +1,3 @@
-@font-face {
-	font-family: OpenSansRegular;
-	src: url('fonts/OpenSans-Regular.ttf');
-}
-
 body {
 	background-color: #202020;
 	color: #CDCCCC;
@@ -31,16 +26,15 @@ body {
 	position: absolute;
 	left: 0;
 	right: 0;
-	color: #B6B6B6;
+	color: #F6F6F6;
+	font-family: "Comic Sans MS";
+    text-shadow: 3px 3px #000000;
+
 }
 
-#welcome_window h2:hover {
-	color: #B6B6B6;
-}
-
-#day_phrase {
+.day_phrase {
 	width: 90%;
-	margin: 10% auto 0 auto;
+	margin: 14% auto 0 auto;
 	border-radius: 25px;
 	background: rgba(32, 32, 32, 0.6); 
 }
@@ -48,7 +42,7 @@ body {
 #day_text {
 	padding: 5%;
 	text-align: center;
-
+	font-family: "Comic Sans MS";
 	font-size: 2em;
 	color: #F0F0F0;
 
@@ -82,11 +76,11 @@ body {
 	font-weight: bolder;
 	letter-spacing: 1px;	
 	font-size: 22px;
+	opacity: 0.6;
 }
 
 #go_on:hover {
-	color: #202020;
-	background-color: #B6B6B6;
+	opacity: 0.5;
 }
 
 #web_search {
@@ -113,94 +107,4 @@ body {
 	font-weight: bold;
 	padding: 15px 30px;
 	outline: none;
-}
-
-#set_as_hp {
-	float: left;
-	width : 10%;
-	height: 25px;
-	background-color: blue;
-}
-
-
-h1 {
-	font-size: 124px;
-	text-align: center;
-	color: #B81D18;
-	position: static;
-}
-
-#top_menu {	
-	width: 100%;
-	background-color: #202020;
-	height: 130px;
-	position: absolute;
-	top: -250px;
-	left: 0;
-	right: 0;
-}
-
-#top_menu img {
-	float: left;
-	width: 40%;
-	height: 130px;
-	margin-left: 3%;
-	border-radius: 25px;
-}
-
-#top_menu #menu_container {
-	float: right;
-	height: 130px;
-	width: 57%;
-text-align: center;
-}
-
-#top_menu #menu_container ul{
-	padding: 0 auto 0 auto;
-	float: right;
-	text-decoration: none;
-	margin-right: 5%;
-	padding-top: 25px;
-}
-
-#top_menu #menu_container ul li {
-	color: #004687;
-	font-size: 0px;
-	display: inline;
-	margin-left: 15px;
-
-}
-
-a {
-	text-decoration: none;
-
-}
-
-a:visited {
-	color: #004687;
-}
-
-#container {
-	width: 80%;
-	background-color: #202020;
-}
-
-#left {
-	float: left;
-	width: 10%;
-}
-
-#right {
-	width: 10%;
-	float: right;
-}
-
-#left, #right {
-	background-color: #B81D18;
-}
-
-#container, #left, #right {
-	display: none;
-	margin-top: 180px;
-	height: 400px;
 }
