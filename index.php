@@ -28,10 +28,10 @@ $row = $result->fetch_assoc();
 		<link rel="shortcut icon" href="Pictures/brain.ico" />
 	</head>
 	<body>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    	<script src="javascript.js"></script>
 
-		<div id = "welcome_window">
+		<?php
+			echo " <div id = \"welcome_window\" style=\"background-image: url(".$row['picture'].");\"> " ;
+		?>	
 			<h2>Култура на Деня </h2>
 
 			<div id = "day_phrase">
@@ -39,24 +39,12 @@ $row = $result->fetch_assoc();
 					<?php echo $row['information']; ?>
 					<!-- Айфеловата кула е метална решетъчна кула с височина 324 m (заедно с антените, приблизително колкото 81-етажна сграда), издигната в северозападния край на парка „Марсово поле“ в Париж, край река Сена, в 7-ми арондисман. -->
 				</div>
-				<div id = "day_pic">
-
-					<?php
-						echo "<img src={$row['picture']}>";
-					?>
-				</div>
 			</div>
 			<div id = "welcome_buttons">
-
 				<div id = "web_search">
-					<form action="https://www.google.com/search" method = "get">	
-						<input name="q" type="text" size="40" />
-						<input type="submit" value="Google IT" />
-					</form>
-				
-					<form action="https://www.youtube.com/results" method="get">
-						<input type="text" maxlength="128" size = "40" />
-						<input type="submit" value="Youtube IT" />
+					<form action="https://www.google.com/search" method = "get">
+					    <input id="field" name="field" type="text"/>
+					    <input id="submit" name="submit" type="submit" value="Google Search" />
 					</form>
 				</div>
 			
@@ -85,6 +73,7 @@ $row = $result->fetch_assoc();
 		</div>
 		<div id = "right">
 		</div>
-
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    	<script src="javascript.js"></script>
 	</body>
 </html>
