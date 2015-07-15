@@ -20,7 +20,6 @@ $row = $result->fetch_assoc();
 
 ?>
 
-<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -43,23 +42,45 @@ $row = $result->fetch_assoc();
 			<div id = "welcome_buttons">
 				<div id = "web_search">
 					<form action="https://www.google.com/search?q=" method = "GET">
-					    <input id="field" name="q" type="text"/>
+					    <input id="field" name="q" type="text" value = ""/>
 					    <input id="submit" name="submit" type="submit" value="Google Search" />
 					</form>
 				</div>
+			</div>
 			
-				<div id = "go_on">
+				<div class = "go_on">
 						Продължи <!--към сайта-->
 				</div>
+
+				<div id = "plus">+</div>
+		</div>
+
+		<div id = "plus_menu">
+			<div id = "left_part">
+				<h2>Добави Факт</h2>
+				<form action = "suggest_fact.php" method = "post">
+					<input id = "add_fact" type = "text" name = "fact" autocomplete = "off" /><br>
+					<input id = "suggest_fact" type = "submit" value = "Suggest" />
+					
+				</form>
+			</div>
+			<div id = "right_part">
+				<h2>За Нас</h2>
+			</div>
+			<div class = "go_back">
+				Go Back
 			</div>
 		</div>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     	<script src="javascript.js"></script>
 		<script>
-			$('#go_on').click(function() {
-				$('.day_phrase').fadeOut(10);
+			var count = 0;
+			$('.go_on').click(function() {
+				$('.day_phrase').hide();
 				$('.day_phrase').fadeIn(250);
+				if(count) { location.reload();}	
+				count++;		
 				$('#day_text').html(
 					<?php
 						$number = rand(1,1299);
@@ -70,6 +91,21 @@ $row = $result->fetch_assoc();
 					?>
 				);		
 			});
+
+			$("#plus").click(function() {
+				$("#plus_menu").animate({
+					top: "0"
+				}, 200).delay(250);
+				$(".go_back").css("display","block");
+			});	
+
+			$(".go_back").click(function() {
+				$("#plus_menu").animate({
+					top: "-100%"
+				});
+				$(".go_back").hide();
+			})
+	
 		</script>
 	</body>
 </html>

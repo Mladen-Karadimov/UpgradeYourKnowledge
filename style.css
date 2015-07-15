@@ -62,14 +62,15 @@ body {
 }
 
 
-#go_on {
+.go_on,
+.go_back {
+	float: right;
 	position: fixed;
 	bottom: 0px;
 	width: 100%;
 	height: 40px;
 	background-color: #202020;
 	margin-right: 10%;
-	margin-top: 1.5%;
 	padding-top: 9px;
 	text-align: center;
 	color: #B6B6B6;
@@ -79,7 +80,7 @@ body {
 	opacity: 0.6;
 }
 
-#go_on:hover {
+.go_on:hover, .go_back:hover {
 	opacity: 0.5;
 }
 
@@ -107,4 +108,78 @@ body {
 	font-weight: bold;
 	padding: 15px 30px;
 	outline: none;
+}
+
+#plus {
+	float: left;
+	font-size: 72px;
+	height: 40px;
+
+	margin-left: 5px;
+	position: fixed;
+	bottom: 25px;
+}
+
+#plus:hover {
+	cursor: pointer;
+}
+
+
+#plus_menu {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -100%;
+	left: 0px;
+	bottom: 0px;
+}
+
+#plus_menu #left_part {
+	float: left;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	background-color: blue;
+	border-right: 3px solid;
+}
+
+#plus_menu #right_part {
+	float: right;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0px;
+	background-color: yellow;
+}
+
+#plus_menu #left_part h2 {
+	text-align: center;
+	font-size: 42px;
+	font-weight: bold;
+}
+
+#plus_menu #right_part h2 {
+	text-align: center;
+	font-size: 42px;
+	font-weight: bold;
+}
+
+#plus_menu #left_part form {
+	text-align: center;
+}
+
+#add_fact {
+	width: 70%;
+	height: 150px;
+	font-size: 25px;
+	padding-top: 0;
+}
+
+#suggest_fact {
+	margin-top: 10px;
+}
+
+#plus_menu .go_back {
+	display: none;
 }
