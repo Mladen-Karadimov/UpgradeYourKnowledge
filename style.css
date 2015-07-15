@@ -140,7 +140,7 @@ body {
 	height: 100%;
 	position: absolute;
 	left: 0px;
-	background-color: blue;
+	background-color: #202020;
 	border-right: 3px solid;
 }
 
@@ -150,7 +150,7 @@ body {
 	height: 100%;
 	position: absolute;
 	right: 0px;
-	background-color: yellow;
+	background-color: #B62020;
 }
 
 #plus_menu #left_part h2 {
@@ -182,4 +182,13 @@ body {
 
 #plus_menu .go_back {
 	display: none;
+}
+
+#about_us {
+	text-align: center;
+	margin-left: 15%;
+	width: 70%;
+	height: 430px;
+	position: absolute;
+	overflow: auto;
 }

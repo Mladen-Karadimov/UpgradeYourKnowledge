@@ -19,8 +19,6 @@
 	VALUE ( \" $fact \")";
 	$result = $conn->query($sql) or die ($conn->error);
 
-	// header('Location : http://http://localhost/xampp/SaitBratMi');
-	// exit();
 ?>
 
 <script type="text/javascript">
